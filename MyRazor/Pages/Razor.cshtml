@@ -1,0 +1,54 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+
+    //lista med kurser
+  var courses = new List<string>
+    {
+        "DT057G, Webbutveckling I",
+        "DT060G, ASP.NET Core",
+        "DT084G,Introduktion till programmering i JavaScript",
+        "DT068G, Webbanvändbarhet",
+        "DT003G, Databaser", 
+        "DT211G, Frontensbaserad webbutveckling", 
+        "Dt207G, Backendbaserad webbutveckling", 
+        "DT208G, Programmering i TypeScript", 
+        "DT200G, Grafisk teknik för webb", 
+        "IK060G, Projektledning", 
+        "DT071G, Programmering i C#.NET", 
+        "DT209G, Webbutveckling för wordpress", 
+        "DT193G, Fullstackutveckling med ramverk"
+    };
+
+//datum och tid
+var currentDate = DateTime.Now;
+
+//är det fredag?
+var isFriday = currentDate.DayOfWeek == DayOfWeek.Friday;
+}
+
+<h2>Kurslista</h2>
+<p>Här är en lista över kurser jag har läst:</p>
+<ul>
+    @foreach (var course in courses)
+    {
+        <li>@course</li>
+    }
+</ul>
+
+
+
+<h2>Är det fredag?</h2>
+<p>
+    @if (isFriday)
+    {
+        <strong>Idag är det fredag!</strong>
+    }
+    else
+    {
+        <strong>Idag är det inte fredag.</strong>
+    }
+</p>
+
+<p>Du besökte sidan: @currentDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
