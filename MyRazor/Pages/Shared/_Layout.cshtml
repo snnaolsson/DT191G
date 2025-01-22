@@ -16,9 +16,9 @@
             <aside>
                 <nav>
                     <ul>
-                        <li><a href="/" class="@((ViewData["Title"] as string) == "Start" ? "active" : "")">Start</a></li>
-                        <li><a href="/Razor" class="@((ViewData["Title"] as string) == "Razor" ? "active" : "")">Razor</a></li>
-                        <li><a href="/About" class="@((ViewData["Title"] as string) == "Om sidan" ? "active" : "")">Om sidan</a></li>
+                        <li class="=nav-item"><a class="nav-link text-dark" asp-area="" asp-page="/Index">Startsida</a> 
+                        <li class="=nav-item"><a class="nav-link text-dark" asp-area="" asp-page="/About">Om sidan</a>
+                        <li class="=nav-item"><a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>  
                     </ul>
                 </nav>
             </aside>

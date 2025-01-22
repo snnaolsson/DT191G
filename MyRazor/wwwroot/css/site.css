@@ -58,11 +58,6 @@ aside nav ul li a {
   border-radius: 5px;
 }
 
-aside nav ul li a.active {
-  background-color: #007bff;
-  color: white;
-}
-
 main {
   flex-grow: 1;
   padding: 20px;
@@ -76,4 +71,59 @@ footer {
 }
 #clock{
   color: rgb(255, 68, 218);
+}
+
+/* För skärmar mindre än 768px (t.ex. mobil) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #logo {
+    height: 80px; /* Mindre storlek på loggan */
+  }
+
+  .content {
+    flex-direction: column; /* Stapla innehållet istället för sidledes */
+  }
+
+  aside {
+    width: 100%; /* Gör sidomenyn till full bredd */
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  aside nav ul {
+    display: flex; /* Horisontell meny för mobiler */
+    justify-content: space-around;
+  }
+
+  aside nav ul li {
+    margin: 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+/* För skärmar mellan 768px och 1024px (t.ex. surfplatta) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .date {
+    font-size: 12px; /* Mindre datumtext */
+  }
+
+  aside {
+    width: 150px; /* Smalare sidomeny */
+  }
+
+  aside nav ul li a {
+    font-size: 14px; /* Mindre textstorlek i menyer */
+  }
+
+  main {
+    padding: 15px;
+  }
 }

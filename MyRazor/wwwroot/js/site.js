@@ -1,4 +1,5 @@
 ﻿
+
 document.addEventListener("DOMContentLoaded", function () {
     const clockElement = document.getElementById("clock");
 
@@ -17,3 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initiera direkt vid laddning
     updateClock();
 });
+
